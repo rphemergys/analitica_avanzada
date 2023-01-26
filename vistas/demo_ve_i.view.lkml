@@ -262,7 +262,7 @@ view: demo_ve_i {
     label: "Peso %"
     drill_fields: [cadena, suma_monto]
     value_format: "0%"
-    #direction: "column"
+    direction: "column"
   }
 
   dimension: reabasto {
