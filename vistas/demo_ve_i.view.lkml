@@ -50,6 +50,7 @@ view: demo_ve_i {
   dimension: marca {
     type: string
     sql: ${TABLE}.Marca ;;
+    drill_fields: [categoria, cadena]
   }
 
   dimension: monto_i {
