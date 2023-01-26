@@ -170,7 +170,7 @@ view: demo_ve_i {
       \"rows_font_size\":12
       }' %}
 
-      {{ link }}&vis_config={{ vis_config | encode_uri }}&fields=demo_ve_i.cadena,demo_ve_i.suma_monto,&sorts=demo_ve_i.suma_monto desc&limit=500&total=on"
+      {{ link }}&vis_config={{ vis_config | encode_uri }}&fields=demo_ve_i.cadena,demo_ve_i.suma_monto,demo_ve_i.suma_monto_porcen&sorts=demo_ve_i.suma_monto desc&limit=500&total=on"
     }
 
     link: {
@@ -252,8 +252,17 @@ view: demo_ve_i {
       \"rows_font_size\":12
       }' %}
 
-      {{ link }}&vis_config={{ vis_config | encode_uri }}&fields=demo_ve_i.marca,demo_ve_i.suma_monto,&limit=500&sorts=demo_ve_i.suma_monto desc&total=on"
+      {{ link }}&vis_config={{ vis_config | encode_uri }}&fields=demo_ve_i.marca,demo_ve_i.suma_monto,demo_ve_i.suma_monto_porcen&limit=500&sorts=demo_ve_i.suma_monto desc&total=on"
     }
+  }
+
+  measure: suma_monto_porcen {
+    type: percent_of_total
+    sql: ${suma_monto} ;;
+    label: "Peso %"
+    drill_fields: [cadena, suma_monto]
+    value_format: "0.00%"
+    #direction: "column"
   }
 
   dimension: reabasto {
