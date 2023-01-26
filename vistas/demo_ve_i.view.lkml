@@ -92,7 +92,7 @@ view: demo_ve_i {
     drill_fields: [cadena, suma_monto]
 
     link: {
-      label: "por Cadena"
+      label: "Ver por Cadena"
       url: "
       {% assign vis_config = '{
       \"show_view_names\":false,
@@ -174,7 +174,7 @@ view: demo_ve_i {
     }
 
     link: {
-      label: "por Marca" #SubReporte a Marca
+      label: "Ver por Marca" #SubReporte a Marca
       url: "
       {% assign vis_config = '{
       \"show_view_names\":false,
@@ -270,7 +270,7 @@ view: demo_ve_i {
     drill_fields: [cadena, suma_reabasto]
 
     link: {
-      label: "por Cadena"
+      label: "Ver por Cadena"
       url: "
       {% assign vis_config = '{
       \"show_view_names\":false,
@@ -352,7 +352,7 @@ view: demo_ve_i {
     }
 
     link: {
-      label: "por Marca" #SubReporte a Marca
+      label: "Ver por Marca" #SubReporte a Marca
       url: "
       {% assign vis_config = '{
       \"show_view_names\":false,
