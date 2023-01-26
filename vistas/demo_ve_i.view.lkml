@@ -89,7 +89,7 @@ view: demo_ve_i {
     sql: ${monto} ;;
     label: "Venta"
     value_format_name: usd
-    drill_fields: [cadena, categoria, marca]
+    drill_fields: [cadena, suma_monto]
   }
 
   dimension: reabasto {
@@ -103,7 +103,7 @@ view: demo_ve_i {
     sql: ${reabasto} ;;
     label: "Reabasto"
     value_format_name: usd
-    drill_fields: [cadena, categoria, marca]
+    drill_fields: [cadena, suma_reabasto]
   }
 
   dimension: inventario {
@@ -116,7 +116,7 @@ view: demo_ve_i {
     sql: ${inventario} ;;
     label: "Total Inventario"
     value_format_name: usd
-    drill_fields: [cadena, categoria, marca]
+    drill_fields: [cadena, suma_inventario]
   }
 
   measure: avg_inventario {
