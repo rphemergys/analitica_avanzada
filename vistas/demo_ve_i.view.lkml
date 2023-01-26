@@ -20,11 +20,6 @@ view: demo_ve_i {
     drill_fields: [marca,cadena]
   }
 
-#  dimension: fecha {
- #   type: string
-  #  sql: ${TABLE}.Fecha ;;
-  #}
-
   dimension_group: fecha {
     type: time
     skip_drill_filter: yes
