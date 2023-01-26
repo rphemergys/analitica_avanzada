@@ -261,7 +261,7 @@ view: demo_ve_i {
     sql: ${suma_monto} ;;
     label: "Peso %"
     drill_fields: [cadena, suma_monto]
-    value_format: "0.00%"
+    value_format: "0%"
     #direction: "column"
   }
 
