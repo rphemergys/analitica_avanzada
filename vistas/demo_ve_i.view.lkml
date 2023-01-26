@@ -447,7 +447,7 @@ view: demo_ve_i {
     drill_fields: [cadena, suma_inventario]
 
     link: {
-      label: "por Cadena"
+      label: "Ver por Cadena"
       url: "
       {% assign vis_config = '{
       \"show_view_names\":false,
@@ -529,7 +529,7 @@ view: demo_ve_i {
     }
 
     link: {
-      label: "por Marca" #SubReporte a Marca
+      label: "Ver por Marca" #SubReporte a Marca
       url: "
       {% assign vis_config = '{
       \"show_view_names\":false,
