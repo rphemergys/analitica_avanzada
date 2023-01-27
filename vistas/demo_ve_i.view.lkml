@@ -392,7 +392,7 @@ view: demo_ve_i {
       \"series_types\":{}
       }' %}
 
-      {{ link }}&vis_config={{ vis_config | encode_uri }}&fields=demo_ve_i.cadena,demo_ve_i.categoria,demo_ve_i.suma_monto,demo_ve_i.suma_monto_porcen&pivots=demo_ve_i.fecha&limit=500"
+      {{ link }}&vis_config={{ vis_config | encode_uri }}&fields=demo_ve_i.cadena,demo_ve_i.categoria,demo_ve_i.suma_monto,demo_ve_i.suma_monto_porcen&limit=500"
     }
 
   }
