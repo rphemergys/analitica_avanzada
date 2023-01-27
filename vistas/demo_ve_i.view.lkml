@@ -42,6 +42,12 @@ view: demo_ve_i {
     label: "Flag"
   }
 
+  dimension: semester_flag {
+    type: number
+    sql: ${TABLE}.Semester_flag ;;
+    label: "Semester Flag"
+  }
+
   dimension: marca {
     type: string
     sql: ${TABLE}.Marca ;;
