@@ -19,14 +19,21 @@ view: demo_credit {
     sql: ${TABLE}.Avg_OTB ;;
   }
 
+  measure: avg_avg_otb {
+    type: average
+    sql: ${avg_otb} ;;
+    label: "Average OTB"
+    value_format: "0\%"
+  }
+
   dimension: avg_utilization_ratio {
     type: number
     sql: ${TABLE}.Avg_Utilization_Ratio ;;
   }
 
-  dimension: card_category {
+  dimension: credit_category {
     type: string
-    sql: ${TABLE}.Card_Category ;;
+    sql: ${TABLE}.Credit_Category ;;
   }
 
   dimension: credit_limit {
