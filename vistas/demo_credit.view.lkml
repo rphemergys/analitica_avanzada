@@ -48,6 +48,12 @@ view: demo_credit {
     sql: ${TABLE}.Credit_Category ;;
   }
 
+  measure: count_credit_category {
+    type: count_distinct
+    sql: ${credit_category} ;;
+    label: "Total credit category"
+  }
+
   dimension: credit_limit {
     type: number
     sql: ${TABLE}.Credit_Limit ;;
