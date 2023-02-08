@@ -29,7 +29,7 @@ view: demo_credit {
     type: average
     sql: ${avg_otb} ;;
     label: "Average OTB"
-    value_format: "0\%"
+    #value_format: "0\%"
   }
 
   dimension: avg_utilization_ratio {
