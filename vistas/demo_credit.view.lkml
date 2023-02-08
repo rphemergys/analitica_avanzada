@@ -19,6 +19,12 @@ view: demo_credit {
     sql: ${TABLE}.Avg_OTB ;;
   }
 
+  dimension: zip_code {
+    type:  zipcode
+    sql: ${TABLE}.Zip_Code ;;
+    label: "Zip code"
+    }
+
   measure: avg_avg_otb {
     type: average
     sql: ${avg_otb} ;;
