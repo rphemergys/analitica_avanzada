@@ -122,6 +122,12 @@ view: demo_credit {
     sql: ${TABLE}.Trans_amt ;;
   }
 
+  measure: sum_trans_amt {
+   type: sum
+   sql: ${trans_amt} ;;
+   value_format_name: usd
+  }
+
   dimension: trans_change {
     type: number
     sql: ${TABLE}.Trans_change ;;
