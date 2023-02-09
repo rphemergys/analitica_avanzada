@@ -83,8 +83,8 @@ view: demo_credit {
     hidden: yes
   }
 
-  measure: sum_credit_score {
-    type: sum
+  measure: avg_credit_score {
+    type: average
     sql: ${credit_score} ;;
     #value_format_name: usd
     label: "Credit score"
