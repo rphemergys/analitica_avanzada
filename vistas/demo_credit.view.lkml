@@ -109,6 +109,13 @@ view: demo_credit {
     sql: ${TABLE}.Dependent_count ;;
   }
 
+  measure: avg_dependent_count {
+    type: average
+    sql: ${dependent_count} ;;
+    #value_format_name: usd
+    label: "Dependent count"
+  }
+
   dimension: education_level {
     type: string
     sql: ${TABLE}.Education_Level ;;
