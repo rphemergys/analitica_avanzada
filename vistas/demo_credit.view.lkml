@@ -17,6 +17,14 @@ view: demo_credit {
   dimension: avg_otb {
     type: number
     sql: ${TABLE}.Avg_OTB ;;
+    hidden: yes
+  }
+
+  measure: avg_avg_otb {
+    type: average
+    sql: ${avg_otb} ;;
+    label: "Average OTB"
+    #value_format: "0\%"
   }
 
   dimension: zip_code {
@@ -31,21 +39,23 @@ view: demo_credit {
     label: "Zip code s"
   }
 
-  measure: avg_avg_otb {
-    type: average
-    sql: ${avg_otb} ;;
-    label: "Average OTB"
-    #value_format: "0\%"
-  }
-
   dimension: avg_utilization_ratio {
     type: number
     sql: ${TABLE}.Avg_Utilization_Ratio ;;
+    hidden: yes
+  }
+
+  measure: avg_avg_utilization_ratio {
+    type: average
+    sql: ${avg_utilization_ratio} ;;
+    label: "Average utilization ratio"
+    #value_format: "0\%"
   }
 
   dimension: credit_category {
     type: string
     sql: ${TABLE}.Credit_Category ;;
+    label: "Credit category"
   }
 
   measure: count_credit_category {
