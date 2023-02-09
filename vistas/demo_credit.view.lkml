@@ -70,11 +70,11 @@ view: demo_credit {
     hidden: yes
   }
 
-  measure: sum_credit_limit {
-    type: sum
+  measure: avg_credit_limit {
+    type: average
     sql: ${credit_limit} ;;
     #value_format_name: usd
-    label: "Credit limit"
+    label: "Avg Credit limit"
   }
 
   dimension: credit_score {
