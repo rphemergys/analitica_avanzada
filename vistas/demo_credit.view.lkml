@@ -145,4 +145,10 @@ view: demo_credit {
     sql: ${TABLE}.Trans_change ;;
   }
 
+  measure: sum_trans_change {
+    type: sum
+    sql: ${trans_change} ;;
+    value_format_name: usd
+  }
+
 }
