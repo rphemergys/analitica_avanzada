@@ -215,6 +215,7 @@ view: demo_credit {
     type: sum
     sql: ${trans_change} ;;
     value_format_name: usd
+    label: "Transaction change"
   }
 
 }
