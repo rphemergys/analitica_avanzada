@@ -56,6 +56,7 @@ view: demo_credit {
     type: string
     sql: ${TABLE}.Credit_Category ;;
     label: "Credit category"
+    drill_fields: [gender, marital_status]
   }
 
   measure: count_credit_category {
