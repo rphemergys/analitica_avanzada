@@ -114,6 +114,7 @@ view: demo_credit {
   dimension: dependent_count {
     type: number
     sql: ${TABLE}.Dependent_count ;;
+    hidden: yes
   }
 
   measure: avg_dependent_count {
