@@ -220,11 +220,18 @@ view: demo_credit {
     hidden: yes
   }
 
-  measure: sum_trans_amt {
-   type: sum
+  measure: avg_trans_amt {
+   type: average
    sql: ${trans_amt} ;;
    value_format_name: usd
-  label: "Transactions amount"
+  label: "Transactions amount avg"
+  }
+
+  measure: sum_trans_amt {
+    type: sum
+    sql: ${trans_amt} ;;
+    value_format_name: usd
+    label: "Transactions amount"
   }
 
   dimension: trans_change {
