@@ -96,6 +96,14 @@ view: demo_credit {
     label: "Customer age"
   }
 
+  dimension: age_tier {
+    type: tier
+    tiers: [0, 10, 20, 30, 40, 50, 60, 70]
+    style: integer # the default value, could be excluded
+    sql: ${customer_age} ;;
+    label: "Age range"
+  }
+
   dimension: dependent_count {
     type: number
     sql: ${TABLE}.Dependent_count ;;
