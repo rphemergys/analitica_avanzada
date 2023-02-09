@@ -73,7 +73,7 @@ view: demo_credit {
   measure: avg_credit_limit {
     type: average
     sql: ${credit_limit} ;;
-    value_format_name: decimal_2
+    value_format_name: usd
     label: "Avg Credit limit"
   }
 
