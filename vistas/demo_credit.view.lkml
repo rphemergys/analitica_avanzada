@@ -9,6 +9,12 @@ view: demo_credit {
     sql: ${TABLE}.ID ;;
   }
 
+  measure: id_count {
+    type: count_distinct
+    sql: ${id} ;;
+    label: "Customers count"
+  }
+
   dimension: attrition_flag {
     type: string
     sql: ${TABLE}.Attrition_Flag ;;
