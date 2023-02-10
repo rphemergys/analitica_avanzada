@@ -20,6 +20,7 @@ view: demo_credit {
     type: count_distinct
     sql: ${id} ;;
     label: "Customers count"
+    drill_fields: [details_customer*]
   }
 
   dimension: attrition_flag {
