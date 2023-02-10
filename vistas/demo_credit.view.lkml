@@ -235,6 +235,7 @@ view: demo_credit {
    sql: ${trans_amt} ;;
    value_format_name: usd
   label: "Transactions amount avg"
+  drill_fields: [details_customer*]
   }
 
   measure: sum_trans_amt {
