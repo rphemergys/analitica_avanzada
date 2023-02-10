@@ -21,6 +21,7 @@ view: demo_credit {
     sql: ${id} ;;
     label: "Customers count"
     drill_fields: [details_customer*]
+    value_format_name: id
   }
 
   dimension: attrition_flag {
