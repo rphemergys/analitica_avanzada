@@ -1462,6 +1462,6 @@
     listens_to_filters: []
     field: demo_credit.marital_status
   embed_style:
-    background_color: "#F0EEED"
+    background_color: "#F8EAD8"
     show_title: true
     show_filters_bar: true
