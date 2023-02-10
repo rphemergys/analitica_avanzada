@@ -1,5 +1,5 @@
 - dashboard: credit_risks_legacy
-  title: Credit Risks
+  title: Credit Risks Legacy
   layout: newspaper
   preferred_viewer: dashboards
   description: ''
@@ -539,7 +539,8 @@
     y_axis_zoom: true
     series_types: {}
     series_colors:
-      Existing Customer - demo_credit.avg_avg_utilization_ratio: "#EA4335"
+      Existing Customer - demo_credit.avg_avg_utilization_ratio: "#1A73E8"
+      Attrited Customer - demo_credit.avg_avg_utilization_ratio: "#EA4335"
     show_row_numbers: true
     truncate_column_names: false
     hide_totals: false
@@ -602,7 +603,8 @@
     y_axis_zoom: true
     series_types: {}
     series_colors:
-      Existing Customer - demo_credit.avg_credit_limit: "#EA4335"
+      Existing Customer - demo_credit.avg_credit_limit: "#1A73E8"
+      Attrited Customer - demo_credit.avg_credit_limit: "#EA4335"
     show_row_numbers: true
     truncate_column_names: false
     hide_totals: false
@@ -709,6 +711,8 @@
     fields: [demo_credit.income_category, demo_credit.avg_trans_amt, demo_credit.avg_avg_utilization_ratio,
       demo_credit.avg_credit_score, demo_credit.attrition_flag]
     pivots: [demo_credit.attrition_flag]
+    filters:
+      demo_credit.income_category: "-Unknown"
     sorts: [demo_credit.attrition_flag, demo_credit.income_category]
     limit: 500
     show_view_names: false
@@ -721,9 +725,9 @@
     table_theme: white
     limit_displayed_rows: false
     enable_conditional_formatting: false
-    header_text_alignment: left
+    header_text_alignment: center
     header_font_size: '12'
-    rows_font_size: '12'
+    rows_font_size: '13'
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
     show_sql_query_menu_options: false
@@ -1038,7 +1042,8 @@
     series_colors:
       0 - demo_credit.id_count: "#1A73E8"
       1 - demo_credit.id_count: "#9334E6"
-      0 - demo_credit.avg_avg_utilization_ratio: "#EA4335"
+      0 - demo_credit.avg_avg_utilization_ratio: "#2a18e6"
+      1 - demo_credit.avg_avg_utilization_ratio: "#F9AB00"
     series_labels:
       0 - demo_credit.id_count: Historic
       1 - demo_credit.id_count: Predicted
@@ -1128,6 +1133,15 @@
           - "#ffd724"
           - "#99c140"
           - "#068505"
+    series_text_format:
+      demo_credit.gender:
+        align: left
+    conditional_formatting: [{type: along a scale..., value: !!null '', background_color: "#1A73E8",
+        font_color: !!null '', color_application: {collection_id: 7c56cc21-66e4-41c9-81ce-a60e1c3967b2,
+          palette_id: 4a00499b-c0fe-4b15-a304-4083c07ff4c4, options: {constraints: {
+              min: {type: minimum}, mid: {type: number, value: 0}, max: {type: maximum}},
+            mirror: true, reverse: false, stepped: false}}, bold: false, italic: false,
+        strikethrough: false, fields: []}]
     defaults_version: 1
     listen:
       Gender: demo_credit.gender
@@ -1318,7 +1332,8 @@
       0 - demo_credit.id_count: "#1A73E8"
       1 - demo_credit.id_count: "#9334E6"
       0 - demo_credit.avg_avg_utilization_ratio: "#7CB342"
-      0 - demo_credit.avg_credit_score: "#EA4335"
+      0 - demo_credit.avg_credit_score: "#1f14e6"
+      1 - demo_credit.avg_credit_score: "#F9AB00"
     series_labels:
       0 - demo_credit.id_count: Historic
       1 - demo_credit.id_count: Predicted
@@ -1384,7 +1399,7 @@
     required: false
     ui_config:
       type: tag_list
-      display: inline
+      display: popover
     model: analitica_avanzada
     explore: demo_credit
     listens_to_filters: []
@@ -1397,7 +1412,7 @@
     required: false
     ui_config:
       type: tag_list
-      display: inline
+      display: popover
       options:
       - '0'
       - '1'
@@ -1413,7 +1428,7 @@
     required: false
     ui_config:
       type: tag_list
-      display: inline
+      display: popover
     model: analitica_avanzada
     explore: demo_credit
     listens_to_filters: []
@@ -1426,7 +1441,7 @@
     required: false
     ui_config:
       type: tag_list
-      display: inline
+      display: popover
     model: analitica_avanzada
     explore: demo_credit
     listens_to_filters: []
@@ -1439,7 +1454,7 @@
     required: false
     ui_config:
       type: checkboxes
-      display: inline
+      display: popover
     model: analitica_avanzada
     explore: demo_credit
     listens_to_filters: []
@@ -1452,7 +1467,7 @@
     required: false
     ui_config:
       type: tag_list
-      display: inline
+      display: popover
     model: analitica_avanzada
     explore: demo_credit
     listens_to_filters: []

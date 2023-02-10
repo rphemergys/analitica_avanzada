@@ -157,6 +157,17 @@ view: demo_credit {
     type: string
     sql: ${TABLE}.Gender ;;
     label: "Gender"
+    html:{% if value == 'M' %}
+
+    <div style="color: black; background-color: #E3F6FF; font-size:100%; text-align:center">{{ rendered_value }}</div>
+
+    {% elsif value == 'F' %}
+
+    <div style="color: black; background-color: #FFECEF; font-size:100%; text-align:center">{{ rendered_value }}</div>
+
+    {% endif %}
+
+    ;;
   }
 
   dimension: historic_flag {
