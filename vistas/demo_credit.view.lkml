@@ -27,6 +27,17 @@ view: demo_credit {
   dimension: attrition_flag {
     type: string
     sql: ${TABLE}.Attrition_Flag ;;
+    html:{% if value == 'Attrited Customer' %}
+
+    <p style="color: black; background-color: #F55050; font-size:100%; text-align:center">{{ rendered_value }}</p>
+
+    {% elsif value == 'Existing Customer' %}
+
+    <p style="color: black; background-color: #85CDFD; font-size:100%; text-align:center">{{ rendered_value }}</p>
+
+    {% endif %}
+
+    ;;
   }
 
   dimension: avg_otb {
