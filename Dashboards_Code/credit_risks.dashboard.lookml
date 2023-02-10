@@ -1,7 +1,7 @@
-- dashboard: credit_risks_legacy
+- dashboard: credit_risks
   title: Credit Risks
   layout: newspaper
-  preferred_viewer: dashboards
+  preferred_viewer: dashboards-next
   description: ''
   preferred_slug: xI6btukXcJn82VF7yGMuFN
   elements:
@@ -1383,28 +1383,13 @@
     allow_multiple_values: true
     required: false
     ui_config:
-      type: tag_list
+      type: checkboxes
       display: inline
     model: analitica_avanzada
     explore: demo_credit
     listens_to_filters: []
     field: demo_credit.attrition_flag
-  - name: Historic Flag
-    title: Historic Flag
-    type: field_filter
-    default_value: ''
-    allow_multiple_values: true
-    required: false
-    ui_config:
-      type: tag_list
-      display: inline
-      options:
-      - '0'
-      - '1'
-    model: analitica_avanzada
-    explore: demo_credit
-    listens_to_filters: []
-    field: demo_credit.historic_flag
+
   - name: Gender
     title: Gender
     type: field_filter
@@ -1412,25 +1397,15 @@
     allow_multiple_values: true
     required: false
     ui_config:
-      type: tag_list
+      type: checkboxes
       display: inline
+      options:
+        - F
+        - M
     model: analitica_avanzada
     explore: demo_credit
     listens_to_filters: []
     field: demo_credit.gender
-  - name: Marital status
-    title: Marital status
-    type: field_filter
-    default_value: ''
-    allow_multiple_values: true
-    required: false
-    ui_config:
-      type: tag_list
-      display: inline
-    model: analitica_avanzada
-    explore: demo_credit
-    listens_to_filters: []
-    field: demo_credit.marital_status
   - name: Credit category
     title: Credit category
     type: field_filter
@@ -1457,3 +1432,36 @@
     explore: demo_credit
     listens_to_filters: []
     field: demo_credit.income_category
+  - name: Historic Flag
+    title: Historic Flag
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: inline
+      options:
+      - '0'
+      - '1'
+    model: analitica_avanzada
+    explore: demo_credit
+    listens_to_filters: []
+    field: demo_credit.historic_flag
+  - name: Marital status
+    title: Marital status
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: inline
+    model: analitica_avanzada
+    explore: demo_credit
+    listens_to_filters: []
+    field: demo_credit.marital_status
+  embed_style:
+    background_color: "#F0EEED"
+    show_title: true
+    show_filters_bar: true
