@@ -2,7 +2,7 @@ connection: "emergys-bq-conn"
 
 # include all the views
 include: "/vistas/*.view.lkml" # include all views in the views/ folder in this project
-#include: "/*.dashboard"
+include: "/Dashboards_Code/*.dashboard"
 
 datagroup: analitica_avanzada_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
