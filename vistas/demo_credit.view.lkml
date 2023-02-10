@@ -65,6 +65,7 @@ view: demo_credit {
     sql: ${avg_utilization_ratio} ;;
     label: "Average utilization ratio"
     #value_format: "0\%"
+    value_format_name: percent_0
   }
 
   dimension: credit_category {
