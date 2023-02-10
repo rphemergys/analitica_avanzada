@@ -5,7 +5,7 @@ view: demo_credit {
 
   set: details_customer {
     fields: [
-      id, marital_status, education_level, customer_age, gender, credit_category, avg_dependent_count, avg_credit_limit
+      id, marital_status, education_level, customer_age, gender, credit_category, avg_dependent_count, avg_credit_limit, avg_trans_amt
       ,avg_utilization_ratio, avg_credit_score
     ]
   }
