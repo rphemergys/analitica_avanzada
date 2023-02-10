@@ -6,7 +6,7 @@ view: demo_credit {
   set: details_customer {
     fields: [
       id, marital_status, education_level, customer_age, gender, credit_category, avg_dependent_count, avg_credit_limit, avg_trans_amt
-      ,avg_utilization_ratio, avg_credit_score
+      ,avg_utilization_ratio, avg_revolving, avg_credit_score
     ]
   }
 
@@ -71,7 +71,7 @@ view: demo_credit {
     type: string
     sql: ${TABLE}.Credit_Category ;;
     label: "Credit category"
-    drill_fields: [gender, marital_status]
+    drill_fields: [gender, marital_status, education_level]
   }
 
   measure: count_credit_category {
@@ -138,6 +138,7 @@ view: demo_credit {
     type: string
     sql: ${TABLE}.Education_Level ;;
     label: "Education level"
+    drill_fields: [gender, marital_status, income_category]
   }
 
   dimension: gender {
@@ -155,12 +156,14 @@ view: demo_credit {
     type: string
     sql: ${TABLE}.Income_Category ;;
     label: "Income category"
+    drill_fields: [gender, marital_status, education_level, credit_category]
   }
 
   dimension: marital_status {
     type: string
     sql: ${TABLE}.Marital_Status ;;
     label: "Marital status"
+    drill_fields: [gender, education_level, income_category, credit_category]
   }
 
   dimension: months_inactive {
