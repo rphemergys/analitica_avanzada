@@ -3,6 +3,13 @@ view: demo_credit {
     ;;
   drill_fields: [id]
 
+  set: details_customer {
+    fields: [
+      id, marital_status, education_level, customer_age, gender, credit_category, avg_dependent_count, avg_credit_limit
+      ,avg_utilization_ratio, avg_credit_score
+    ]
+  }
+
   dimension: id {
     primary_key: yes
     type: number
@@ -82,6 +89,7 @@ view: demo_credit {
     sql: ${credit_limit} ;;
     value_format_name: usd
     label: "Avg Credit limit"
+    drill_fields: [details_customer*]
   }
 
   dimension: credit_score {
@@ -208,11 +216,12 @@ view: demo_credit {
     hidden: yes
   }
 
-  measure: sum_revolving {
-    type: sum
+  measure: avg_revolving {
+    type: average
     sql: ${revolving} ;;
     #value_format_name: usd
-    label: "Total revolving"
+    label: "Total revolving avg"
+    drill_fields: [details_customer*]
   }
 
   dimension: trans_amt {
