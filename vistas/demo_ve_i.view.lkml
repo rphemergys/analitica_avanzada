@@ -2,6 +2,10 @@ view: demo_ve_i {
   sql_table_name: `pocs-training-emergys.Demo_analitica.Demo_VeI`
     ;;
 
+  set: detalles {
+    fields: [cadena, tienda, marca, categoria, fecha_year, fecha_month, suma_monto, suma_monto_porcen, suma_inventario, suma_reabasto]
+  }
+
   dimension: cadena {
     type: string
     sql: ${TABLE}.Cadena ;;
@@ -91,7 +95,7 @@ view: demo_ve_i {
     sql: ${monto} ;;
     label: "Venta"
     value_format_name: usd
-    drill_fields: [cadena, suma_monto]
+    drill_fields: [detalles*]
 
     link: {
       label: "Ver por Cadena"
@@ -380,7 +384,7 @@ view: demo_ve_i {
     type: percent_of_total
     sql: ${suma_monto} ;;
     label: "Peso %"
-    drill_fields: [cadena, suma_monto]
+    drill_fields: [detalles*]
     value_format: "0\%"
     direction: "column"
   }
@@ -396,7 +400,7 @@ view: demo_ve_i {
     sql: ${reabasto} ;;
     label: "Reabasto"
     value_format_name: usd
-    drill_fields: [cadena, suma_reabasto]
+    drill_fields: [detalles*]
 
     link: {
       label: "Ver por Cadena"
