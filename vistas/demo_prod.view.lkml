@@ -34,6 +34,13 @@ view: demo_prod {
     #value_format: "0\%"
   }
 
+  measure: sum_line_1 {
+    type: sum
+    sql: ${line_1} ;;
+    label: "Total Line 1"
+    #value_format: "0\%"
+  }
+
   dimension: line_1_scrap {
     type: number
     sql: ${TABLE}.Line_1_Scrap ;;
@@ -58,6 +65,13 @@ view: demo_prod {
     #value_format: "0\%"
   }
 
+  measure: sum_line_2 {
+    type: sum
+    sql: ${line_2} ;;
+    label: "Total Line 2"
+    #value_format: "0\%"
+  }
+
   dimension: line_2_scrap {
     type: number
     sql: ${TABLE}.Line_2_Scrap ;;
@@ -79,6 +93,13 @@ view: demo_prod {
     type: average
     sql: ${line_3} ;;
     label: "Average Line 3"
+    #value_format: "0\%"
+  }
+
+  measure: sum_line_3 {
+    type: sum
+    sql: ${line_3} ;;
+    label: "Total Line 3"
     #value_format: "0\%"
   }
 
