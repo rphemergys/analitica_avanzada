@@ -14,3 +14,5 @@ persist_with: analitica_avanzada_default_datagroup
 explore: demo_ve_i {}
 
 explore: demo_credit {}
+
+explore: demo_prod {}
